@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#12213A"/>
+  <circle cx="32" cy="32" r="21" fill="none" stroke="#B8874F" stroke-width="2.5" stroke-dasharray="4 3.5"/>
+  <text x="32" y="38" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="600" fill="#F6F1E4" text-anchor="middle">VSA</text>
+</svg>

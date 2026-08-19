@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <title>Visa &amp; Study Alliance Global | Study Abroad &amp; Visa Consultants</title>
+    <meta name="description" content="Visa and Study Alliance Global helps students plan, apply, and depart for study abroad — counselling, university admissions, scholarships, and visa guidance for 12+ destinations." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      Static Netlify Forms detection.
+      Netlify scans the built HTML (not the JS bundle) for a form tag with
+      data-netlify="true" to register the form endpoint. This hidden form's
+      field names must mirror the React form's field names exactly. The real
+      form the user interacts with is rendered by React and submits to this
+      same endpoint via fetch — see ConsultationCTA.jsx.
+    -->
+    <form name="consultation" data-netlify="true" netlify-honeypot="company" hidden>
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="text" name="destination" />
+      <input type="text" name="intake" />
+      <textarea name="message"></textarea>
+      <input type="text" name="company" />
+    </form>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
