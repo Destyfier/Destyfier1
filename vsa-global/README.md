@@ -1,15 +1,14 @@
 # Visa & Study Alliance Global
 
-A React + Vite marketing site for a study-abroad / visa consultancy, built with
-Framer Motion for interaction and a hidden Netlify Forms integration so the
-consultation form works with zero backend code.
+React + Vite site for Visa & Study Alliance Global (Bharatpur, Chitwan) — study
+abroad and visa consultancy. Netlify-ready with a working consultation form
+(Netlify Forms, no backend needed) and a floating WhatsApp button.
 
-## Design
+## Brand
 
-Motif: the travel document. Ink-navy + brass foil + a single stamp-red accent,
-set in Fraunces (display serif) and IBM Plex Mono (codes/data) over Inter
-(body). The signature device is the dashed "ink stamp" circle, reused for
-stats, the boarding-pass hero, and the testimonial stamps.
+- Palette: Navy Blue, Vibrant Orange, Charcoal, Grey, White (see `src/index.css`)
+- Logo: `public/logo.png`, generated from the uploaded circular badge logo
+- Contact: 056-511505 (office) · +977 9851410627 (mobile/WhatsApp)
 
 ## Run locally
 
@@ -17,8 +16,6 @@ stats, the boarding-pass hero, and the testimonial stamps.
 npm install
 npm run dev
 ```
-
-Opens at http://localhost:5173
 
 ## Build
 
@@ -30,28 +27,27 @@ Outputs static files to `dist/`.
 
 ## Deploy to Netlify
 
-**Option A — drag and drop**
-1. Run `npm run build` locally.
-2. Go to [app.netlify.com/drop](https://app.netlify.com/drop) and drag the `dist/` folder in.
-
-**Option B — connect the repo (recommended)**
-1. Push this project to a GitHub/GitLab/Bitbucket repo.
-2. In Netlify: **Add new site → Import an existing project**, pick the repo.
-3. Build command: `npm run build` — Publish directory: `dist` (already set in `netlify.toml`).
-4. Deploy.
+Drag the `dist/` folder to [app.netlify.com/drop](https://app.netlify.com/drop),
+or connect the repo (build command `npm run build`, publish dir `dist` — already
+set in `netlify.toml`). If your project lives inside a subfolder in your Git
+repo, set **Base directory** to that folder name in Netlify's build settings.
 
 ## The consultation form
 
-The form on the site posts to Netlify Forms via `fetch`, with a matching hidden
-`<form>` in `index.html` so Netlify's build-time bot can detect and register
-it. Once deployed on Netlify, submissions will appear under
-**Site settings → Forms** in your Netlify dashboard, and you can wire up
-email notifications there — no server code needed. It won't capture
-submissions on other hosts (Vercel, GitHub Pages, etc.) since this is a
-Netlify-specific feature.
+Two lead-capture forms (Hero section, both share `name="consultation"`) post to
+Netlify Forms via `fetch`, with a matching hidden form in `index.html` for
+Netlify's build-time bot to register the endpoint. Submissions appear under
+**Site settings → Forms** in your Netlify dashboard once deployed — set up
+email notifications there.
 
 ## Editing content
 
-Almost all copy (stats, destinations, services, journey steps, testimonials,
-partners, branches, footer links) lives in `src/data/content.js` — edit that
-file rather than hunting through components.
+Brand details, stats, destinations, services, test prep, resources, the
+process steps, testimonials and footer links all live in
+`src/data/content.js`. Update contact info, address, or WhatsApp number there
+— every component reads from this one file.
+
+## Swapping the logo
+
+Replace `public/logo.png` (and regenerate `public/favicon-32.png` /
+`favicon-64.png` at those pixel sizes) if you get an updated brand logo.

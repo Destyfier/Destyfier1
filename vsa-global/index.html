@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <title>Visa &amp; Study Alliance Global | Study Abroad &amp; Visa Consultants</title>
-    <meta name="description" content="Visa and Study Alliance Global helps students plan, apply, and depart for study abroad — counselling, university admissions, scholarships, and visa guidance for 12+ destinations." />
+    <title>Visa & Study Alliance Global | Study Abroad & Visa Consultants, Chitwan</title>
+    <meta name="description" content="Visa & Study Alliance Global — expert study abroad and visa guidance in Bharatpur, Chitwan. Free counselling, IELTS/PTE prep, university admissions, scholarships and visa documentation for Australia, USA, Canada, UK and more." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,15 +19,17 @@
       Static Netlify Forms detection.
       Netlify scans the built HTML (not the JS bundle) for a form tag with
       data-netlify="true" to register the form endpoint. This hidden form's
-      field names must mirror the React form's field names exactly. The real
-      form the user interacts with is rendered by React and submits to this
-      same endpoint via fetch — see ConsultationCTA.jsx.
+      field names must mirror the React forms' field names exactly. The real
+      forms the user interacts with are rendered by React and submit to this
+      same endpoint via fetch — see Hero.jsx and ConsultationCTA.jsx.
     -->
     <form name="consultation" data-netlify="true" netlify-honeypot="company" hidden>
       <input type="text" name="name" />
       <input type="tel" name="phone" />
+      <input type="email" name="email" />
       <input type="text" name="destination" />
-      <input type="text" name="intake" />
+      <input type="text" name="intakeYear" />
+      <input type="text" name="intakeQuarter" />
       <textarea name="message"></textarea>
       <input type="text" name="company" />
     </form>
